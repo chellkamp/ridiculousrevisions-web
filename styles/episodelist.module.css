@@ -1,0 +1,97 @@
+.leftarrow, .rightarrow {
+	display: inline-block;
+}
+
+.clickablearrow {
+	cursor: pointer;
+}
+
+.nonclickablearrow svg {
+	fill: #dddddd;
+}
+
+.clickablearrow svg:hover {
+	fill: #ff0000;
+}
+
+.leftarrow {
+	float: left;
+}
+
+.rightarrow {
+	float: right;
+}
+
+.leftarrow svg, .rightarrow svg {
+	height: 2rem;
+}
+
+.episodeEntry {
+	margin: 1.5rem 0;
+	padding: 0;
+	clear: both;
+}
+
+.episodeEntry header {
+	background-color: #eeeeee;
+}
+
+.episodeEntry h2 {
+	display: block;
+	font-size: 1.7rem;
+	font-weight: 600;
+	margin: 0.5rem 0.5rem 0;
+	padding: 0;
+	
+}
+
+.episodeEntry h3 {
+	display: block;
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.episodeEntry header a {
+	color: black;
+	text-decoration: none;
+}
+
+.episodeEntry header time {
+	display: block;
+	font-size: 1.2rem;
+	font-style: italic;
+	margin: 0 0.5rem 0.5rem;
+	padding: 0;
+}
+
+.episodeEntry main {
+	display: block;
+	margin: 0.7rem;
+}
+
+.episodeEntry footer {
+	display: block;
+	margin: 0.7rem;
+}
+
+.episodeAddlInfo {
+	margin: 0 0 0 0.7rem;
+}
+
+.episodeAddlInfo h1{
+	display: block;
+	font-size: 1.4rem;
+	font-weight: 600;
+	font-style: italic;
+}
+
+.episodeAddlInfo h2 {
+	display: block;
+	font-size: 1.3rem;
+	font-weight: 400;
+	font-style: italic;
+}
+
+.episodeEntry audio {
+	outline: none;
+}

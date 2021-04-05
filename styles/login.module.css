@@ -1,0 +1,36 @@
+.loginformcontainer {
+	margin: 0 auto;
+	width: fit-content;
+}
+
+.inputcontainer {
+	padding: 0.5em;
+	background-color: #cdcdcd;
+}
+
+.fieldline {
+	margin: 0.5em 0 0.5em auto;
+	width: fit-content;
+}
+
+.fieldline label {
+	width: 10em;
+	text-align: right;
+}
+
+.submitform input[type=submit] {
+	padding: 0.5em;
+	border: 1px solid black;
+	border-radius: 0.5em;
+	background-color: black;
+	color: white;
+}
+
+.submitform input[type=submit]:hover {
+	background-color: white;
+	color: black;
+}
+
+.error {
+	color: red;
+}
