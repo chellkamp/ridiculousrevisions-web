@@ -1,10 +1,8 @@
 
 /**
  * Runs the web server.
- * @param {Object} options options
- * @param {string} options.configPath absolute path for config file
  */
-function runServer(options) {	
+function runServer() {	
 	const { createServer } = require('http');
 	const { parse} = require('url');
 	const next = require('next');
