@@ -1,5 +1,7 @@
 import React from 'react';
 
+import CommonView from '../../../components/admin/CommonView';
+
 import TitleOnlyList from '../../../components/TitleOnlyList';
 
 export async function getServerSideProps(context) {
@@ -18,7 +20,9 @@ export async function getServerSideProps(context) {
 export default class EpisodeEditMainPage extends React.Component {
 	render() {
 		return (
-			<TitleOnlyList rssUrl={this.props.podcastFeedUrl}/>
+			<CommonView>
+				<TitleOnlyList rssUrl={this.props.podcastFeedUrl}/>
+			</CommonView>
 		);
 	}
 }

@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'playfair_display_scblack';
+    src: url('/font/playfairdisplaysc-black-webfont.woff2') format('woff2'),
+         url('/font/playfairdisplaysc-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'heeboregular';
+    src: url('/font/heebo-variablefont_wght-webfont.woff2') format('woff2'),
+         url('/font/heebo-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.usetitlefont {
+	font-family: 'playfair_display_scblack', serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.backsplash {
+	background-image: url("/img/bookshelf2.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+}
+
+.overbacksplash {
+	background-color: rgba(255, 255, 255, 0.7);
+	overflow: hidden;
+}
+
+html, body, header, footer {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: 'heeboregular', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'playfair_display_scblack', serif;
+	font-weight: normal;
+	font-style: normal;
+	display: block;
+	width: fit-content;
+	margin: auto;
+	text-align: center;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+h4 {
+	font-size: 1rem;
+	font-style: italic;
+	color: #7c7c7c;
+}
+
+h5 {
+	font-size: 0.7rem;
+}
+
+.mainBody {
+	background-color: white;
+}
+
+.pageHeader>div {
+	display: inline-block;
+}
+
+.pageFooter>div {
+	width: fit-content;
+	margin: auto;
+}
+
+.socialIcon {
+	display: inline-block;
+	margin: 0.5rem;
+}
+
+.socialIcon svg{
+	height: 4rem;
+}
+
+.socialIcon svg path {
+	fill: black;
+}
+
+.socialIcon a:hover svg path{
+	fill: rgb(0, 104, 56);
+}
+
+.logo img {
+	height: 4rem;
+	
+}
+
+.navlist ul {
+	list-style-type: none;
+	font-size: 3rem;
+}
+
+.navlist ul li {
+	display: inline-block;
+	padding: 0 0.5rem;
+}
+
+.navlist li a {
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+	border-top: 0.5rem solid rgba(0,0,0,0);
+}
+
+.navlist li a:hover {
+	border-top: 0.5rem solid rgb(0,104,56);
+}
+
+.titledContent {
+	margin: 1rem 0 0;
+}
+
+.contentcontainer {
+	width: fit-content;
+	max-width: 85%;
+	margin: 2rem auto;
+	padding: 2rem;
+	background-color: black;
+	opacity: 1;
+}
+
+.contentcontainer>div {
+	background-color: white;
+	padding: 0.5rem;
+}
+
+img {
+	max-width:100%;
+	max-height:100%;
+}
+
+.titleText {
+	font-style: italic;
+	font-weight: bold;
+}

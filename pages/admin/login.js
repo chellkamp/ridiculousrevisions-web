@@ -1,7 +1,7 @@
 import React from 'react';
 
-import LoginForm from '../../components/auth/LoginForm';
-import ChangePasswordForm from '../../components/auth/ChangePasswordForm';
+import LoginForm from '../../components/admin/LoginForm';
+import ChangePasswordForm from '../../components/admin/ChangePasswordForm';
 
 import {parseRequestBody} from '../../lib/HttpUtil';
 

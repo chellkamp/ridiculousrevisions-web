@@ -109,7 +109,7 @@ export default class EpisodeList extends React.Component {
 		rightClassName += ` ${rightArrowClickable ? listStyle.clickablearrow : listStyle.nonclickablearrow}`;
 
 		return (
-			<div>
+			<div className={listStyle.container}>
 				<div className={listStyle.pagination}>
 					<div className={leftClassName}>
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#000000"
@@ -130,6 +130,20 @@ export default class EpisodeList extends React.Component {
 						return this.renderRssItem(item, key);
 					})
 				}
+				<div className={listStyle.pagination}>
+					<div className={leftClassName}>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#000000"
+							onClick={() => { if (leftArrowClickable) this.updateList(-displayCount) }}>
+							<polygon points="0,50 100,0 100,100" />
+						</svg>
+					</div>
+					<div className={rightClassName}>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#000000"
+							onClick={() => { if (rightArrowClickable) this.updateList(displayCount) }}>
+							<polygon points="0,0 100,50 0,100" />
+						</svg>
+					</div>
+				</div>
 			</div>
 		);
 	}// end render()
@@ -166,7 +180,7 @@ export default class EpisodeList extends React.Component {
 					</h2>
 					<time>{pubDate ? dateFormat.format(pubDate) : ""}</time>
 				</header>
-				<main>{item['description']}</main>
+				<main dangerouslySetInnerHTML={{__html: item['description']}}/>
 				<audio controls src={audioUrl}>
 					<a target="_blank" href={audioUrl}>Download Episode</a>
 				</audio>

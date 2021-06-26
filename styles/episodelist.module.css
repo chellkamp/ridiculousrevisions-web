@@ -1,3 +1,6 @@
+.container {
+	overflow: hidden;
+}
 .leftarrow, .rightarrow {
 	display: inline-block;
 }
@@ -74,6 +77,11 @@
 	margin: 0.7rem;
 }
 
+.episodeEntry footer h3 {
+	margin-left: 0.7rem;
+	color: #8c8c8c;
+}
+
 .episodeAddlInfo {
 	margin: 0 0 0 0.7rem;
 }
@@ -94,4 +102,5 @@
 
 .episodeEntry audio {
 	outline: none;
+	width: 100%;
 }

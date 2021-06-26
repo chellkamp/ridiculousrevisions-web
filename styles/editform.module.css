@@ -1,0 +1,13 @@
+.editform textarea {
+	width: 100%;
+	height: 20em;
+	display: block;
+}
+
+.editform button {
+	margin: 1em;
+}
+
+.message {
+	color: red;
+}

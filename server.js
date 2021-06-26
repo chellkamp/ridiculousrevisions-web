@@ -6,7 +6,7 @@
  */
 function runServer(options) {	
 	const { createServer } = require('http');
-	const { URL } = require('url');
+	const { parse} = require('url');
 	const next = require('next');
 	
 	const dev = process.env.NODE_ENV !== 'production';
@@ -23,8 +23,13 @@ function runServer(options) {
 				//const parsedUrl = parse(req.url, true);
 				
 				const host = req.headers.host;
-				const parsedUrl = new URL(req.url,`http://${host}`);
 				
+				// This is what we SHOULD be able to use, but NextJS hasn't addressed its dependence
+				// on the deprecated parse() function.
+				//const parsedUrl = new URL(req.url,`http://${host}`);
+				
+				const parsedUrl = parse(req.url, true);
+								
 				handle(req, res, parsedUrl);
 			}
 		).listen(

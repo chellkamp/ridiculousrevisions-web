@@ -1,0 +1,43 @@
+
+.wrapper {
+	overflow:hidden;
+}
+.profileContainer {
+	max-width: 25%;
+	font-size: 0.8rem;
+	font-style: italic;
+	float: left;
+	margin: 0 0.5rem 0.5rem 0;
+}
+
+.contactContainer {
+	margin-top: 5rem;
+}
+
+.contactContainer>div {
+	width: fit-content;
+	margin: auto;
+}
+
+.contactContainer>div>div {
+	margin-top: 0.5rem;
+}
+
+.contactContainer a {
+	text-decoration: none;
+	color: #8c8c8c;
+	font-weight: 800;
+}
+
+.contactContainer svg {
+	height: 2rem;
+	margin-right: 0.5rem;
+}
+
+.contactContainer svg path {
+	fill:black;
+}
+
+.contactContainer a:hover svg path{
+	fill: rgb(0, 104, 56)
+}

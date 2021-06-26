@@ -1,5 +1,7 @@
 import React from 'react';
 
+import CommonView from '../../components/admin/CommonView';
+
 export async function getServerSideProps(context) {
 	const AuthUtil = require('../../lib/AuthUtil');
 	const {PrivateConfig} = require('../../lib/PrivateConfig');
@@ -19,7 +21,9 @@ export async function getServerSideProps(context) {
 export default class AdminHome extends React.Component {
 	render() {
 		return (
-			<div>This is the Admin Home.</div>
+			<CommonView>
+				<div>This is the Admin Home.</div>
+			</CommonView>
 		);
 	}
 }

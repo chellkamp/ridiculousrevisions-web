@@ -1,0 +1,19 @@
+
+.imgdiv {
+	max-width: 35rem;
+	padding: 0;
+	margin: auto;
+}
+
+.mainimg {
+	padding: 0;
+	max-width: 35rem;
+	/*border:0.25rem solid black;*/
+}
+
+.slogan {
+	max-width: 35rem;
+	margin: auto;
+	text-align: center;
+	font-size: 1.5rem;
+}
