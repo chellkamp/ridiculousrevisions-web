@@ -144,8 +144,8 @@ Function GetFileList {
 [String] $destDir = "$baseDir\build"
 [String] $tmpZipDir = "$baseDir\build\tmp"
 
-[String] $destZipProd = "historicaldrags-website-prod.zip"
-[String] $destZipDev = "historicaldrags-website-dev.zip"
+[String] $destZipProd = "ridiculousrevisions-website-prod.zip"
+[String] $destZipDev = "ridiculousrevisions-website-dev.zip"
 
 [String] $destZip = Tern $production $destZipProd $destZipDev
 
