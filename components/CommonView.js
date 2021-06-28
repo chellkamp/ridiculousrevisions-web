@@ -30,7 +30,7 @@ export default function CommonView({children}) {
 					{
 						navbarItems.map(
 							(item) => {
-								return <Nav.Link href={item[1]}>{item[0]}</Nav.Link>;
+								return <Nav.Link key={item[0]} href={item[1]}>{item[0]}</Nav.Link>;
 							}
 						)
 					}
