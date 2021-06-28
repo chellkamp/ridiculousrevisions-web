@@ -3,6 +3,7 @@
 	overflow:hidden;
 }
 .profileContainer {
+	min-width: 8rem;
 	max-width: 25%;
 	font-size: 0.8rem;
 	font-style: italic;
