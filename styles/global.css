@@ -80,10 +80,6 @@ h5 {
 	background-color: white;
 }
 
-.pageHeader>div {
-	display: inline-block;
-}
-
 .pageFooter>div {
 	width: fit-content;
 	margin: auto;
@@ -109,27 +105,6 @@ h5 {
 .logo img {
 	height: 4rem;
 	
-}
-
-.navlist ul {
-	list-style-type: none;
-	font-size: 2rem;
-}
-
-.navlist ul li {
-	display: inline-block;
-	padding: 0 0.5rem;
-}
-
-.navlist li a {
-	display: inline-block;
-	text-decoration: none;
-	color: black;
-	border-top: 0.5rem solid rgba(0,0,0,0);
-}
-
-.navlist li a:hover {
-	border-top: 0.5rem solid rgb(0,104,56);
 }
 
 .titledContent {

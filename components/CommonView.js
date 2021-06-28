@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
 import CommonCollection from '../lib/CommonCollection';
 
@@ -15,24 +17,26 @@ export default function CommonView({children}) {
 				<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon_16.png"/>
 				<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon_32.png"/>
 			</Head>
-			<header className="pageHeader">
-				<div className="logo">
-					<Link href="/">
-						<a><img src="/img/title.png" alt="HOME"/></a>
-					</Link>
-				</div>
-				<div className="navlist usetitlefont">
-					<ul>
-						{
-							navbarItems.map(
-								(item) => {
-									return (<li key={item[0]}><Link href={item[1]}><a>{item[0]}</a></Link></li>)
-								}
-							)
-						}
-					</ul>
-				</div>
-			</header>
+			
+			<Navbar expand="lg">
+				<Navbar.Brand href="/">
+					<div className="logo">
+						<img src="/img/title.png" alt="HOME"/>
+					</div>
+				</Navbar.Brand>
+				<Navbar.Toggle aria-controls="basic-navbar-nav"/>
+				<Navbar.Collapse id="basic-navbar-nav">
+				<Nav className="mr-auto">
+					{
+						navbarItems.map(
+							(item) => {
+								return <Nav.Link href={item[1]}>{item[0]}</Nav.Link>;
+							}
+						)
+					}
+				</Nav>
+				</Navbar.Collapse>
+			</Navbar>
 			<main>
 				<div className="backsplash">
 					<div className="overbacksplash">

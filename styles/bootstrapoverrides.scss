@@ -1,0 +1,13 @@
+
+.navbar-nav {
+	font-family: 'playfair_display_scblack', serif;
+	font-size: 2rem;
+}
+
+.navbar button {
+	margin: 0.5rem;
+}
+
+$navbar-light-color: black;
+$navbar-light-hover-color: rgb(0, 104, 56);
+@import "~bootstrap/scss/bootstrap";
