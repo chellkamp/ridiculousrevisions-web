@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import React from 'react';
 
+import BuzzsproutPlayer from './BuzzsproutPlayer';
 import RSSKeyUtil from '../lib/RSSKeyUtil';
 
 import listStyle from '../styles/episodelist.module.css'
@@ -161,7 +162,7 @@ export default class EpisodeList extends React.Component {
 		if (item['enclosure'] && item['enclosure']['$'] && item['enclosure']['$']['url']) {
 			audioUrl = item['enclosure']['$']['url'];
 		}
-
+		
 		let pubDateMs = NaN;
 		let pubDate = null;
 		if (item['pubDate']) {
@@ -172,6 +173,7 @@ export default class EpisodeList extends React.Component {
 		}
 		
 		let episodeLink = `/episodes/${RSSKeyUtil.getParamStringFromKeyValue(pubDate)}`;
+		
 		return (
 			<article className={listStyle.episodeEntry} key={key}>
 				<header>
@@ -181,9 +183,12 @@ export default class EpisodeList extends React.Component {
 					<time>{pubDate ? dateFormat.format(pubDate) : ""}</time>
 				</header>
 				<main dangerouslySetInnerHTML={{__html: item['description']}}/>
+				<BuzzsproutPlayer audioUrl={audioUrl}/>
+				{/*
 				<audio controls src={audioUrl}>
 					<a target="_blank" href={audioUrl}>Download Episode</a>
 				</audio>
+				*/}
 			</article>
 		);
 	}
