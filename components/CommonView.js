@@ -18,7 +18,7 @@ export default function CommonView({children}) {
 				<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon_32.png"/>
 			</Head>
 			
-			<Navbar expand="lg">
+			<Navbar bg="white" fixed="top" expand="lg">
 				<Navbar.Brand href="/">
 					<div className="logo">
 						<img src="/img/title.png" alt="HOME"/>
@@ -40,11 +40,11 @@ export default function CommonView({children}) {
 			<main>
 				<div className="backsplash">
 					<div className="overbacksplash">
-					<div className="contentcontainer">
-						<div>
-							{children}
+						<div className="contentcontainer">
+							<div>
+								{children}
+							</div>
 						</div>
-					</div>
 					</div>
 				</div>
 			</main>

@@ -113,9 +113,9 @@ h5 {
 
 .contentcontainer {
 	width: fit-content;
-	max-width: 85%;
-	margin: 2rem auto;
-	padding: 2rem;
+	max-width: 95%;
+	margin: 7rem auto 2rem;
+	padding: 0.5rem;
 	background-color: black;
 	opacity: 1;
 }
@@ -133,4 +133,11 @@ img {
 .titleText {
 	font-style: italic;
 	font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+	.contentcontainer {
+		max-width: 85%;
+		padding: 2rem;
+	}
 }
