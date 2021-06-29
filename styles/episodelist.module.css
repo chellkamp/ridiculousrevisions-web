@@ -59,6 +59,10 @@
 	text-decoration: none;
 }
 
+.episodeEntry header a:hover div{
+	background-color: rgb(200, 200, 200);
+}
+
 .episodeEntry header time {
 	display: block;
 	font-size: 1.2rem;

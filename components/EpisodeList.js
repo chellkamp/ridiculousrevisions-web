@@ -177,10 +177,14 @@ export default class EpisodeList extends React.Component {
 		return (
 			<article className={listStyle.episodeEntry} key={key}>
 				<header>
-					<h2>
-						<Link href={episodeLink}><a>{item['title']}</a></Link>
-					</h2>
-					<time>{pubDate ? dateFormat.format(pubDate) : ""}</time>
+					<Link href={episodeLink}>
+						<a>
+							<div>
+								<h2>{item['title']}</h2>
+								<time>{pubDate ? dateFormat.format(pubDate) : ""}</time>
+							</div>
+						</a>
+					</Link>
 				</header>
 				<main dangerouslySetInnerHTML={{__html: item['description']}}/>
 				<BuzzsproutPlayer audioUrl={audioUrl}/>

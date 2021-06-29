@@ -1,3 +1,5 @@
+import BuzzsproutPlayer from './BuzzsproutPlayer';
+
 import listStyle from '../styles/episodelist.module.css';
 
 const showdown = require('showdown');
@@ -44,10 +46,7 @@ export default function EpisodeDetails(props) {
 					) : ''
 				}
 			</footer>
-			<audio controls>
-				<source src={audioUrl} type="audio/mpeg"/>
-				<a target="_blank" href={audioUrl}>Download Episode</a>
-			</audio>
+			<BuzzsproutPlayer audioUrl={audioUrl}/>
 		</article>
 	);
 }
