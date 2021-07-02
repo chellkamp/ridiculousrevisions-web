@@ -8,7 +8,6 @@ import Error404 from '../../404';
 
 import formStyle from '../../../styles/editform.module.css';
 
-const showdown = require('showdown');
 const xml2js = require('xml2js');
 
 /**
