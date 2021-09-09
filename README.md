@@ -79,3 +79,8 @@ During execution, **MakeSourceBundle.ps1** will prompt the user with dialogs to 
 - Navigation icons from [iconmonstr](https://iconmonstr.com/)
 - Background photo from [Unsplash](https://unsplash.com/)
 - Title art/favicon by Chris Hellkamp (me)
+
+## TODO List
+- Add a *Logout* button to admin pages.
+- Integrate AWS S3 bucket into site with access controlled through AWS Cognito Identity Pool.
+    - Goal is to upload show scripts through admin pages and make them publicly available for reading through episode detail pages.
