@@ -1,6 +1,6 @@
 const http = require('http');
 import {secureApiMethod} from '../../../lib/AuthUtil';
-import {saveEpisodeDoc} from '../../../lib/DBUtil';
+import {saveEpisodeDoc} from '../../../lib/pgDBUtil';
 
 /**
  * @typedef {Object} SaveEpisodeArgs

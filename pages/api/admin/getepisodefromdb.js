@@ -1,6 +1,6 @@
 const http = require('http');
 import {secureApiMethod} from '../../../lib/AuthUtil';
-import {getEpisodeDocForGuid} from '../../../lib/DBUtil';
+import {getEpisodeDocForGuid} from '../../../lib/pgDBUtil';
 
 /**
  * @param {http.IncomingMessage} req

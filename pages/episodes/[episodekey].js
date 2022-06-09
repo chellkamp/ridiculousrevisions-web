@@ -56,7 +56,7 @@ export async function getServerSideProps(context) {
 			throw new Error(`Error retrieving RSS feed from address ${SiteConfig.RSS_URL}`);
 		}
 		
-		const DBUtil = require('../../lib/DBUtil'); // This has to be a server-side use only, which is why it's here
+		const DBUtil = require('../../lib/pgDBUtil'); // This has to be a server-side use only, which is why it's here
 		
 		let rawDocs = await DBUtil.getEpisodeDocsForUTCDate(year, month, day);
 			
