@@ -3,8 +3,8 @@
 *Ridiculous Revisions* is an amateur podcast launched back in March 2021.  This project houses the code for the podcast's website.
 
 ## Site Architecture
-1. ***AWS Elastic Beanstalk Instance with NodeJS*** - hosts website.
-1. ***Database*** - MongoDB or AWS DocumentDB instance; houses show notes.
+1. ***AWS Elastic Beanstalk Instance with NodeJS*** - hosts website.  Node.js version 18.
+1. ***Database*** - PostgreSQL instance; houses show notes.
 1. ***AWS Cognito User Pool*** - authentication service; only relevant to admin functions.
 1. ***RSS Feed*** - RSS feed for the related podcast.
 
@@ -15,17 +15,13 @@ This project relies on a config file to run.  For security reasons, configuratio
 
 ### Config file format
     {
-    	"file_contents": {
-    		"DB_CERT": "cert/rds-combined-ca-bundle.pem"
-    	},
-    	
-    	"db": {
-    		"USE_DB_CERT": false,
-    		"DB_STRING": "mongodb://ridrevsweb:ridrevsweb@localhost:27017/?authSource=admin&validateOptions=true&appname=Ridiculous%20Revisions%20Web&ssl=false",
-    		"DB_STRING_EDIT": "mongodb://ridrevswrite:ridrevswrite@localhost:27017/?authSource=admin&validateOptions=true&appname=Ridiculous%20Revisions%20Web&ssl=false",
-    		"DB": "ridiculousrevisions",
-    		"DB_TABLE": "episode"
-    	},
+    "db": {
+        "USE_DB_CERT": false,
+        "DB_STRING": "postgresql://<username>:<password>@localhost:5432/ridiculousrevisions?application_name=Ridiculous%20Revisions%20Web",
+        "DB_STRING_EDIT": "postgresql://<username>:<password>@localhost:5432/ridiculousrevisions?application_name=Ridiculous%20Revisions%20Web",
+        "DB": "ridiculousrevisions",
+        "DB_TABLE": "episode"
+	},
     	"region": "<YOUR_AWS_REGION>",
     	"COGNITO_CLIENT_ID" : "<YOUR_COGNITO_APP_CLIENT_ID>",
     	"COGNITO_USER_POOL_ID": "<YOUR_COGNITO_USER_POOL_ID>",
@@ -33,13 +29,11 @@ This project relies on a config file to run.  For security reasons, configuratio
     	"PODCAST_RSS_URL": "<YOUR_PODCAST_RSS_FEED_URL>"
     }
 
-Note: **USE_DB_CERT** is **false** here because the example DB is a local MongoDB instance.  When we're using a DocumentDB instance on AWS, **USE_DB_CERT** must be set to **true**.
-
 ## Initialize database instance
-Run the following scripts inside a MongoDB or DocumentDB command prompt to initialize the database schema:
-
-1. ***deploy\dbcreateusers.js*** - Create users for read/write operations.
-1. ***deploy\dbinit.js*** - Creates document collection and indices.
+Create a PostgreSQL database called *ridiculousrevisions* with a single table: *episode*.
+Create one user that has read/write access to the *episode* table.
+Create another user that has readonly access to the *episode* table.
+Add the usernames and passwords to the connection strings in your config file.
 
 ## Run locally on workstation
 As this project was created on a Windows machine, examples will use Windows syntax.

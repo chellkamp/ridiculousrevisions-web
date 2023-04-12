@@ -4,16 +4,17 @@
 	"private": true,
 	"scripts": {
 		"dev_old": "next",
-		"build": "next build",
+		"build": "cross-env NODE_OPTIONS=--openssl-legacy-provider next build",
 		"start_old": "next start",
-		"start": "node runserver.js",
-		"localhostdev": "node localhostdev.js",
-		"localhostprod": "node localhostprod.js"
+		"start": "cross-env NODE_OPTIONS=--openssl-legacy-provider node runserver.js",
+		"localhostdev": "cross-env NODE_OPTIONS=--openssl-legacy-provider node localhostdev.js",
+		"localhostprod": "cross-env NODE_OPTIONS=--openssl-legacy-provider node localhostprod.js"
 	},
 	"dependencies": {
 		"@aws-sdk/client-cognito-identity": "^3.9.0",
 		"@aws-sdk/client-cognito-identity-provider": "^3.10.0",
 		"bootstrap": "^5.0.2",
+		"cross-env": "^7.0.3",
 		"mongodb": "^3.6.5",
 		"next": "^10.0.9",
 		"node-fetch": "^2.6.7",
